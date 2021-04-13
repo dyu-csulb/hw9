@@ -37,7 +37,7 @@
       <div class="form-group row">
           <label for="rdoPayType" class="col-sm-4 col-form-label text-right">Payment Type:</label>
           <div class="col-sm-7 pad-5 text-left">
-              <input type="radio" id="cash" name="rdoPayType" checked value="Cash">
+              <input type="radio" id="cash" name="rdoPayType" value="Cash">
               <label for="cash">Cash</label><br>
               
               <input type="radio" id="credit" name="rdoPayType" value="CreditCard">
@@ -69,8 +69,11 @@
           </div>
       </div>
       <hr>
-      <button type="button" class="btn btn-sm btn-primary">Submit</button>
-      <button type="button" class="btn btn-sm btn-primary">Cancel</button>
+      <button id='btnSubmit' type="button" class="btn btn-sm btn-primary">Submit</button>
+      <button id='btnCancel' type="button" class="btn btn-sm btn-primary">Cancel</button>
+      <button id='btnReload' type="button" class="btn btn-sm btn-primary">Reload</button>
+      <br>  <br>
+      <label id="lblMessage"></label>
     </div>
   </div>
 
