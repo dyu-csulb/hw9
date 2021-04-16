@@ -7,7 +7,7 @@ const path = require('path');
 //Declare a variable to use Express
 const app = express();
 
-//Import body parser
+//Import body parser to read json body request. 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -23,9 +23,14 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 //Import Articles model. 
 const articles = require('./models/Articles');
 
-
 //Import assert to get MaxId in array. 
 const assert = require("assert");
+
+
+
+
+
+
 
 /*===================
      Page Routes
@@ -45,6 +50,9 @@ app.get('/ex2', (req, res) => {
 app.get('/ex3', (req, res) => {
     res.sendFile(`${__dirname}/views/ex3.html`);
 });
+
+
+
 
 /*===================
      HTTP Requests
